@@ -1,68 +1,49 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple HTML Page</title>
-    <base href="https://www.Assignment.com/">
+    <title>Event Handling</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
         img {
-            max-width: 100%;
-            height: auto;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>Assignment</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>Peer Assignment</h2>
-            <p>Some small features</p>
-        </section>
+    <h1>Image Gallery</h1>
 
-        <section>
-            <h2>My Hobby</h2>
-            <ul>
-                <li>Coding</li>
-                <li>Failing at coding</li>
-                <li>Fixing the code somehow</li>
-            </ul>
-        </section>
+    <img src="https://pixabay.com/photos/cat-pet-sleep-domestic-cat-animal-4189697/" alt="Image 1" id="Sleeping Cat">
+    
+    <img src="https://pixabay.com/photos/cat-kitten-feline-pussy-cloud-5098930/" alt="Image 2" id="Playful Cat">
+    
+    <img src="https://pixabay.com/photos/kitten-cute-cat-animal-pet-young-943275/" alt="Image 3" id="Kitty">
+    
+    <img src="https://pixabay.com/photos/cat-eyes-animal-pet-portrait-eye-5337501/" alt="Image 4" id="Black Cat">
+    
+    <img src="https://pixabay.com/photos/cat-kitten-pets-animals-housecat-2934720/" alt="Image 5" id="Dumbfound Cat">
+    
+    <img src="https://pixabay.com/photos/cat-redhead-striped-funny-posture-3602557/" alt="Image 6" id="Brushing Cat">
 
-        <section>
-            <h2>Image Gallery</h2>
-            <figure>
-                <img src="https://th-thumbnailer.cdn-si-edu.com/bgmkh2ypz03IkiRR50I-UMaqUQc=/1000x750/filters:no_upscale():focal(1061x707:1062x708)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/55/95/55958815-3a8a-4032-ac7a-ff8c8ec8898a/gettyimages-1067956982.jpg" alt="Cat Image">
-                <figcaption>Image 1</figcaption>
-            </figure>
+    <script>
+        // Function to be called on page load
+        window.onload = function () {
+            alert("Page has loaded!");
+        };
 
-            <figure>
-                <img src="https://media.istockphoto.com/id/183412466/photo/eastern-bluebirds-male-and-female.jpg?s=612x612&w=0&k=20&c=6_EQHnGedwdjM9QTUF2c1ce7cC3XtlxvMPpU5HAouhc=" alt="Bird Image">
-                <figcaption>Image 2</figcaption>
-            </figure>
+        // Function to be called on mouse movement
+        document.addEventListener("mousemove", function (event) {
+            console.log("Mouse coordinates: " + event.clientX + ", " + event.clientY);
+        });
 
-            <figure>
-                <img src="https://thumbs.dreamstime.com/b/golden-retriever-dog-21668976.jpg" alt="Dog Image">
-                <figcaption>Image 3</figcaption>
-            </figure>
-        </section>
-    </main>
+        // Function to be called on keyboard access
+        document.addEventListener("keydown", function (event) {
+            alert("Key pressed: " + event.key);
+        });
+    </script>
 
-    <footer>
-        <p>End!</p>
-    </footer>
-
-    <!-- Link to an external source -->
-    <a href="https://www.youtube.com" target="_blank">Visit youtube.com</a>
 </body>
-
 </html>
